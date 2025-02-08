@@ -4,6 +4,7 @@
 
 :root {
   --font-sent: "Sen", sans-serif;
+  --primary-color: #ffb900;
 }
 
 html {
@@ -38,6 +39,24 @@ a {
   max-width: calc(100vw - 48px);
   margin: 0 auto;
 }
+
+.heading {
+  font-family: var(--font-sent);
+  font-weight: 700;
+  color: #171100;
+  letter-spacing: -0.02em;
+}
+
+.heading.lev1 {
+  font-size: 5.8rem;
+  line-height: 1.17;
+}
+
+.heading.lev2 {
+  font-size: 3.8rem;
+  line-height: 1.26;
+}
+
 /* ========== Header */
 .header .body {
   display: flex;
@@ -168,13 +187,61 @@ header.fixed {
   font-weight: 700;
   line-height: 1.17;
   color: #171100;
+  letter-spacing: -0.02em;
 }
+
 .content-block .desc {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.66;
   margin: 22px 0;
 }
+
 .cta-group {
   margin: 38px 0 48px;
 }
+
+/* ===== Popular Styling ===== */
+.popular {
+  padding: 65px 0;
+  margin-top: 135px;
+}
+.popular-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popular-top .desc {
+  width: 458px;
+  margin-top: 16px;
+  color: #5f5b53;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.67;
+}
+
+.popular-top .control {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.popular-top .btn-control {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.popular-top .btn-control:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+/* ===== End Popular Styling ===== */
