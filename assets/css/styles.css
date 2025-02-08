@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --font-sent: "Sen", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+/* ========== common ============= */
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 28px;
+  color: #fff;
+  background-color: #171100;
+  text-align: center;
+  padding: 0 12px;
+  min-width: 118px;
+  /* line-height: 50px; */
+  padding: 11px 0;
+  border-radius: 24.5px;
+}
+.main-content {
+  width: 1170px;
+  max-width: calc(100vw - 48px);
+  margin: 0 auto;
+}
+/* ========== Header */
+.header .body {
+  display: flex;
+  align-items: center;
+  padding: 36px 0 8px;
+  background-color: #fffcf4;
+}
+header.fixed {
+  position: sticky;
+  top: -28px;
+}
+.header .nav {
+  margin-left: auto;
+}
+.header .nav ul {
+  display: flex;
+}
+.header .nav ul a {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75;
+  padding: 8px 21px;
+  color: #5f5b53;
+  /* background-color: red; */
+}
+.header .nav .active a {
+  color: #171100;
+  /* font-weight: 600; */
+  text-shadow: 1px 0 0 currentColor;
+}
+.header .nav ul a:hover {
+  color: #171100;
+}
+.header .nav .active a::after {
+  position: absolute;
+  left: 21px;
+  bottom: 6px;
+  display: block;
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  opacity: 1;
+  background-color: #171100;
+}
+.btn-signup {
+  min-width: 144px;
+}
+.header .action {
+  margin-left: 49px;
+}
+
+/* ============ Hero ============== */
+.hero {
+  padding-top: 56px;
+  background-color: #fffcf4;
+}
+.hero .body {
+  display: flex;
+}
+/* hero left */
+.hero .media-block {
+  width: 48%;
+  position: relative;
+}
+.hero .media-block .img {
+  width: 470px;
+  min-height: 685px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+/* Hero right */
+.hero .content-block {
+  width: 52%;
+  padding: 64px 0 0 130px;
+}
+.hero .hero-sumary {
+  position: absolute;
+  bottom: 48px;
+  left: 300px;
+  width: 270px;
+  /* min-height: 244px; */
+  background: #ffffff;
+  box-shadow: 0px 16px 32px 0px #0000000d;
+  border-radius: 20px;
+  padding: 24px 63px 14px 24px;
+}
+.hero .item {
+  display: flex;
+  align-items: center;
+}
+.hero-sumary .item + .item {
+  margin-top: 22px;
+}
+.hero-sumary .item:nth-of-type(2) .icon {
+  background-color: #fcefff;
+}
+.hero-sumary .item:nth-of-type(3) .icon {
+  background-color: #ebeaff;
+}
+.hero .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #fff9e8;
+}
+.hero-sumary .info {
+  margin-left: 16px;
+}
+.hero-sumary .label {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #5f5b53;
+}
+.hero-sumary .title {
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #171100;
+}
+
+.content-block .heading {
+  font-family: var(--font-sent);
+  font-size: 5.8rem;
+  font-weight: 700;
+  line-height: 1.17;
+  color: #171100;
+}
+.content-block .desc {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.66;
+  margin: 22px 0;
+}
+.cta-group {
+  margin: 38px 0 48px;
+}
