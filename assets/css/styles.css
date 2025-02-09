@@ -58,6 +58,19 @@ a {
   line-height: 1.26;
 }
 
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.word-break-all {
+  word-break: break-all;
+}
+.line-clamp.line2 {
+  --line-clamp: 2;
+}
+
 /* ========== Header */
 .header .body {
   display: flex;
@@ -285,7 +298,7 @@ header.fixed {
   justify-content: space-between;
 }
 
-.course-item .title  a{
+.course-item .title a {
   color: #171100;
   font-size: 1.8rem;
   font-weight: 600;
