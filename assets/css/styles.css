@@ -64,11 +64,16 @@ a {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
 .word-break-all {
   word-break: break-all;
 }
+
 .line-clamp.line2 {
   --line-clamp: 2;
+}
+.line-clamp.line4 {
+  --line-clamp: 4;
 }
 
 /* ========== Header */
@@ -343,13 +348,21 @@ header.fixed {
 /* ===== Feedback styling ===== */
 .feedback {
   background: #2e2100;
-  height: 380px;
+  /* height: 380px; */
   margin-top: 135px;
   padding: 96px 0;
+}
+.feedback .feedback-list {
+  display: flex;
+  overflow: hidden; /* khi phần tử con vượt quá phần tử cha thì ẩn đi*/
 }
 
 .feedback .feedback-item {
   display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
   /* gap: 241px; */
   /* justify-content: space-between; */
 }
@@ -359,6 +372,7 @@ header.fixed {
   border-radius: 50%;
   background: url(<path-to-image>) lightgray -51.126px -33.052px / 228.267%
     342.4% no-repeat;
+  object-fit: cover;
 }
 .feedback .info .title {
   margin-top: 18px;
@@ -407,3 +421,68 @@ header.fixed {
   font-weight: 400;
   line-height: 1.54; /* 153.846% */
 }
+
+/*===== Feature =====*/
+.features {
+  margin-top: 200px;
+  /* background: orange; */
+}
+.features .main-content {
+  /* height: 438px; */
+}
+
+.features .body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features .images {
+  display: flex;
+  gap: 30px;
+}
+.features .images img {
+  width: 270px;
+  height: 404px;
+  object-fit: cover;
+  /* flex-shrink: 0; */
+}
+.features .images img:first-child {
+  margin-top: 34px;
+}
+
+.features .content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.features .heading {
+  color: #171100;
+  font-family: Sen;
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.26;
+  letter-spacing: -0.76px;
+}
+
+.features .desc {
+  margin-top: 16px;
+  color: #5f5b53;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+}
+
+.features .act {
+  margin-top: 32px;
+}
+
+.features .act .btn {
+  background: #ffb900;
+  min-width: 137px;
+}
+
+/*===== End Feature =====*/
